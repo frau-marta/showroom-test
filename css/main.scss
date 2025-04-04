@@ -1,0 +1,446 @@
+.breadcrumbs {
+  padding: 8px 0 16px 0;
+
+  @media all and (min-width: 768px) {
+    padding: 12px 0 24px 0;
+  }
+  @media all and (min-width: 1440px) {
+    padding: 16px 0 32px 0;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+
+    li {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 4px;
+      line-height: 1.2;
+      color: rgb(131, 139, 142);
+      font-size: 14px;
+
+      &:after {
+        content: '/';
+        display: block;
+      }
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.content p {
+  line-height: 24px;
+  font-size: 16px;
+}
+.content li {
+  line-height: 22px;
+  font-size: 16px;
+}
+.promo-points {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media all and (min-width: 768px) {
+    gap: 32px;
+  }
+  @media all and (min-width: 992px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 26px 0;
+  }
+  @media all and (min-width: 1440px) {
+    gap: 48px;
+    padding: 0;
+  }
+
+  &__pict, picture {
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    order: 1;
+
+    @media all and (min-width: 992px) {
+      order: 2;
+      max-width: 432px;
+    }
+    @media all and (min-width: 1440px) {
+      max-width: 808px;
+    }
+  }
+  &__text {
+    width: 100%;
+    order: 2;
+    font-weight: 600;
+    letter-spacing: -0.75px;
+
+    @media all and (min-width: 992px) {
+      order: 1;
+    }
+    @media all and (min-width: 1440px) {
+      max-width: 552px;
+    }
+  }
+}
+.promo-place {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(131, 139, 142);
+  padding: 48px 0;
+
+  &:last-child {
+    border-bottom: none;
+    padding: 48px 0 0 0;
+  }
+
+  @media all and (min-width: 768px) {
+    padding: 64px 0;
+  }
+  @media all and (min-width: 1440px) {
+    padding: 80px 0;
+  }
+
+  h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+
+    span {
+      display: inline-block;
+      border-radius: 360px;
+      padding: 0 8px;
+      height: 24px;
+      line-height: 24px;
+      font-weight: 600;
+      font-size: 14px;
+
+      &.label-soon {
+        background: rgb(238, 184, 59);
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    @media all and (min-width: 992px) {
+      flex-direction: column;
+    }
+    @media all and (min-width: 1440px) {
+      flex-direction: row;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  &__desc {
+    width: 100%;
+
+    p {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        color: rgb(131, 139, 142);
+      }
+      a {
+        font-weight: 600;
+      }
+    }
+
+    @media all and (min-width: 992px) {
+      br {
+        display: none;
+      }
+    }
+  }
+  &__menu {
+    width: 100%;
+
+    .lead {
+      line-height: 28px;
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 16px;
+
+      @media all and (min-width: 992px) {
+        margin-bottom: 20px;
+      }
+      @media all and (min-width: 1440px) {
+        margin-bottom: 22px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 12px;
+      row-gap: 8px;
+      font-weight: 600;
+      letter-spacing: -0.45px;
+
+      @media all and (min-width: 992px) {
+        letter-spacing: normal;
+      }
+    }
+  }
+  &__show {
+    margin-bottom: 28px;
+
+    @media all and (min-width: 768px) {
+      margin-bottom: 36px;
+    }
+    @media all and (min-width: 1440px) {
+      margin-bottom: 40px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 24px;
+      overflow-x: auto;
+      padding-bottom: 20px;
+
+      @media all and (min-width: 768px) {
+        gap: 32px;
+        padding-bottom: 28px;
+      }
+      @media all and (min-width: 1440px) {
+        padding-bottom: 0;
+      }
+
+      li {
+        min-width: 280px;
+
+        img {
+          width: 100%;
+          height: 188px;
+          object-fit: cover;
+          border-radius: 16px;
+        }
+
+        @media all and (min-width: 768px) {
+          min-width: 302px;
+
+          img {
+            height: 202px;
+          }
+        }
+        @media all and (min-width: 992px) {
+          min-width: 422px;
+
+          img {
+            height: 282px;
+          }
+        }
+        @media all and (min-width: 1440px) {
+          min-width: 328px;
+
+          img {
+            height: 219px;
+          }
+        }
+      }
+    }
+    ul::-webkit-scrollbar {
+      padding: 4px 0;
+      height: 6px;
+      background-color: rgb(206, 211, 217);
+    }
+
+    ul::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: rgb(206, 211, 217);
+    }
+
+    ul::-webkit-scrollbar-track {
+      -webkit-box-shadow: none;
+      border-radius: 0;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+  &__sign {
+    text-align: center;
+  }
+}
+.benefit-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+  padding: 80px 0;
+
+  @media all and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 120px 0;
+  }
+  @media all and (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media all and (min-width: 1440px) {
+    grid-template-columns: repeat(6, 1fr);
+    padding: 160px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 16px;
+    background: rgb(246, 247, 248);
+
+    @media all and (min-width: 768px) {
+      flex-direction: column;
+      gap: 8px;
+      padding: 18px 24px;
+      border-radius: 20px;
+    }
+
+    span {
+      width: 100%;
+      font-weight: 600;
+      line-height: 22px;
+      font-size: 16px;
+
+      @media all and (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 32px;
+
+    @media all and (min-width: 768px) {
+      max-width: 40px;
+    }
+  }
+  &__text {
+    text-align: left;
+
+    @media all and (min-width: 768px) {
+      text-align: center;
+      max-width: 145px;
+    }
+  }
+}
+.subscribe-us {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border-radius: 20px;
+  background: rgb(234, 236, 238);
+  padding: 24px 20px;
+  margin-bottom: 80px;
+
+  @media all and (min-width: 768px) {
+    gap: 38px;
+    padding: 32px;
+    margin-bottom: 96px;
+  }
+  @media all and (min-width: 992px) {
+    margin-bottom: 105px;
+  }
+  @media all and (min-width: 1440px) {
+    gap: 48px;
+    padding: 40px;
+    margin-bottom: 120px;
+  }
+
+  &__head {
+    text-align: center;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 48px;
+  }
+  &__body {
+    form, .form {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      margin: 0 auto;
+      width: 100%;
+      gap: 20px;
+
+      @media all and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 624px;
+        gap: 24px;
+
+        .form-field {
+          &:nth-child(1) {
+            grid-column: span 2 / span 2;
+          }
+          &:nth-child(2) {
+            grid-row-start: 2;
+          }
+          &:nth-child(3) {
+            grid-row-start: 2;
+          }
+          &:nth-child(4) {
+            grid-column: span 2 / span 2;
+          }
+        }
+      }
+      @media all and (min-width: 992px) {
+        max-width: 600px;
+      }
+    }
+    .form-enter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+
+      @media all and (min-width: 768px) {
+        gap: 16px;
+        margin-top: -8px;
+      }
+
+      small {
+        display: block;
+        text-align: center;
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}
